@@ -22,5 +22,15 @@ With the theaters visually distinguished, we see that they generally congregate 
 
 ![Closest Theater](https://github.com/Fivelfivel/dancemaps/blob/master/qgis_maps/closest-theater.jpg) 
 
+The turquoise lines are identifying the theater that is closest to each studio. Several studios can share the same closest theater, but each studio has only one closest theater. This map shows us some interesting information, but it also shows that proximity to a theater is not the determining factor in studio location: many studios are quite far from their closest theater. We can try another version of this that calculates the distance from each studio to each theater, to get an idea of the overall distance between a theater and the studios in the city:
 
+![Studio Distance Matrix](https://github.com/Fivelfivel/dancemaps/blob/master/qgis_maps/theatre-distance-matrix.jpg)
+
+We can use this map to come up with a kind of cumulative distance from a theater to the various studios around the city — the distances of each line are encoded into the properties of the line. So while the distance isn't visible on the map itself (in this visualization), we have the distances to work with should we need them. This would give us a sense of which theater is overall "closest" to studios in general; however, a visual overview still shows that proximity to a theater does not seem to determine studio location. If it did, most studios would be closer to theaters, whereas in this dataset, they don't correlate, seemingly evenly distributed across Manhattan and Brooklyn.
+
+There is another dataset we can bring in which could provide some clarity. So far, I have been looking at straight-line distance, or "as the crow flies." However, as people travel between dance studios and theaters, in New York, they are not generally moving in direct lines. More significant than even the right-angles of the city blocks is, of course, public transportation. Moving between one place and another in New York almost always makes use of the subway system. Lets see what happens when we place the subways onto our map of dance studios.
+
+![Subways](https://github.com/Fivelfivel/dancemaps/blob/master/qgis_maps/studios-subways.png)
+
+Already this is pointing to a correlation, but we can make it much more clear very simply. We'll take a 1/4 mile buffer around each of the subway lines, and see how many of our studios fall within this buffer. A 1/4 mile is roughly a 5-min walk; if a location is within a 1/4 mile of a subway line, it is fair to assume a station is within 5-10min walk, a very accepted walking distance for an average New Yorker.
 
