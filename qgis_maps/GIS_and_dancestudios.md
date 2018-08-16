@@ -34,3 +34,8 @@ There is another dataset we can bring in which could provide some clarity. So fa
 
 Already this is pointing to a correlation, but we can make it much more clear very simply. We'll take a 1/4 mile buffer around each of the subway lines, and see how many of our studios fall within this buffer. A 1/4 mile is roughly a 5-min walk; if a location is within a 1/4 mile of a subway line, it is fair to assume a station is within 5-10min walk, a very accepted walking distance for an average New Yorker.
 
+![Subway Buffer](https://github.com/Fivelfivel/dancemaps/blob/master/qgis_maps/all-subway-buffer.png)
+
+With the buffer in place, there is an immediate correlation between studio location and proximity to subway line. Of the 55 studios in this dataset, only 5 fall outside of this buffer. What seemed like an usual extension into Brooklyn when considering proximity to theaters, now appears not only obvious but intuitive: studios in the north of Brooklyn practically trace the L-train through Williamsburg, Bushwick, and into Ridgewood. So while these studios may have a large straight-line distance to theaters, their proximity to transportation can make them closer by another metric: travel time.
+
+That the location of anything in New York — including avant-garde dance spaces — has a correlation to the subway system should not surprise. But this gives concrete information we can start to consider in the production of dance: how has transportation and commute times impacted dancers practices over the years? Have these factors changed, and if so, what have been the effects of these changes?
